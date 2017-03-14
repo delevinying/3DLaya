@@ -19,7 +19,7 @@ var camera = (scene.addChild(new Laya.Camera(0, 0.1, 300)));
 camera.transform.translate(new Laya.Vector3(0, 0, 150));
 camera.clearColor = null;
 camera.orthographicProjection = true;
-var mesh = scene.addChild(new Laya.MeshSprite3D(Laya.Mesh.load("../../res/threeDimen/staticModel/sphere/sphere-Sphere001.lm")));
+var mesh = scene.addChild(new Laya.MeshSprite3D(Laya.Mesh.load("pl.lm")));
 
 Laya.Utils3D.convert3DCoordTo2DScreenCoord(translate, convertTranslate);
 mesh.transform.localPosition = convertTranslate;
@@ -40,7 +40,7 @@ Laya.loader.load(skin, Laya.Handler.create(this, onLoadComplete));
 
 function onLoadComplete(e) {
     var cb = createComboBox(skin);
-    cb.pos(80, 90);
+    cb.pos(80, 90);//按钮坐标
 }
 
 function createComboBox(skin) {
